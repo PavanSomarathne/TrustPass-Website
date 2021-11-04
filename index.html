@@ -71,9 +71,24 @@
 
     <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
+    <style>
+        .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('./assets/img/preloader.svg') 50% 50% no-repeat #E6E7EE;
+        }
+    </style>
 </head>
 
 <body>
+
+
+    <div class="loader">
+    </div>
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation"
             class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
@@ -431,13 +446,14 @@
             </div>
             <div class="container">
                 <div class="">
-             
+
                     <div class=" d-flex justify-content-between">
                         <div class="card bg-primary shadow-soft text-center border-light m-2 col-3 col-md-3 col-6">
 
                             <div class="card-body m-0 p-3">
                                 <h3 class="h5 card-title mb-0">#1</h3>
-                                <p class="card-text">Verification of citizen on registration and allowing them to authenticate to service providers via 3 factor biometric authentication
+                                <p class="card-text">Verification of citizen on registration and allowing them to
+                                    authenticate to service providers via 3 factor biometric authentication
                                 </p>
 
                             </div>
@@ -447,7 +463,8 @@
 
                             <div class="card-body p-3">
                                 <h3 class="h5 card-title mb-0">#2</h3>
-                                <p class="card-text">Verification of service providers on registration and allowing them to manage application stacks  
+                                <p class="card-text">Verification of service providers on registration and allowing them
+                                    to manage application stacks
                                 </p>
 
                             </div>
@@ -457,7 +474,7 @@
 
                             <div class="card-body p-3">
                                 <h3 class="h5 card-title mb-0">#3 </h3>
-                                <p class="card-text">Implementation of The Cyber Security Intelligence 
+                                <p class="card-text">Implementation of The Cyber Security Intelligence
 
                                 </p>
 
@@ -646,8 +663,7 @@
                             <div class="card-body">
                                 <h3 class="h5 card-title">Project Charter <br /> &nbsp;</h3>
                                 <p class="card-text"></p>
-                                <a href="" id="charter-download" ><i
-                                        class="fas fa-download"></i></a>
+                                <a href="" id="charter-download"><i class="fas fa-download"></i></a>
                             </div>
 
                         </div>
@@ -658,7 +674,7 @@
                             <div class="card-body">
                                 <h3 class="h5 card-title">Proposal Report <br /> ( Group )</h3>
                                 <p class="card-text"></p>
-                                <a id="proposal-group" href="" ><i class="fas fa-download"></i></a>
+                                <a id="proposal-group" href=""><i class="fas fa-download"></i></a>
                             </div>
 
                         </div>
@@ -669,7 +685,7 @@
                             <div class="card-body">
                                 <h3 class="h5 card-title">Proposal Report <br /> ( Individual )</h3>
                                 <p class="card-text"></p>
-                                <a id="proposal-ind" href="" ><i class="fas fa-download"></i></a>
+                                <a id="proposal-ind" href=""><i class="fas fa-download"></i></a>
                             </div>
 
                         </div>
@@ -680,7 +696,7 @@
                             <div class="card-body">
                                 <h3 class="h5 card-title">Status Documents <br /> &nbsp;</h3>
                                 <p class="card-text"></p>
-                                <a id="status-download" href="" ><i class="fas fa-download"></i></a>
+                                <a id="status-download" href=""><i class="fas fa-download"></i></a>
                             </div>
 
                         </div>
@@ -691,7 +707,7 @@
                             <div class="card-body">
                                 <h3 class="h5 card-title">Final Report <br /> ( Group )</h3>
                                 <p class="card-text"></p>
-                                <a id="final-group" href="" ><i class="fas fa-download"></i></a>
+                                <a id="final-group" href=""><i class="fas fa-download"></i></a>
                             </div>
 
                         </div>
@@ -702,7 +718,7 @@
                             <div class="card-body">
                                 <h3 class="h5 card-title">Final Report <br /> ( Individual )</h3>
                                 <p class="card-text"></p>
-                                <a id="final-ind" href="" ><i class="fas fa-download"></i></a>
+                                <a id="final-ind" href=""><i class="fas fa-download"></i></a>
                             </div>
 
                         </div>
@@ -713,7 +729,7 @@
                             <div class="card-body">
                                 <h3 class="h5 card-title">Research Log <br /> Book </h3>
                                 <p class="card-text"></p>
-                                <a id="log-books" href="" ><i class="fas fa-download"></i></a>
+                                <a id="log-books" href=""><i class="fas fa-download"></i></a>
                             </div>
 
                         </div>
@@ -818,23 +834,38 @@
                 </div>
             </div>
             <hr class="my-5">
-            <div class="row">
-                <div class="col">
-                    <a href="https://themesberg.com" target="_blank" class="d-flex justify-content-center">
-                        <img src="./assets/img/themesberg.svg" height="25" class="mb-3" alt="Themesberg Logo">
+
+            <div className="container mx-auto px-8 d-flex justify-content-center align-items-center ">
+
+                <div class="d-flex text-center justify-content-center align-items-center">
+
+                    <a style="font-weight: bold;color: blue; font-size: large;" class="font-bold " href="#">
+
+                        <span className="">
+                            <svg style="width: 1.6rem;font-weight: bold;" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                            </svg>
+                            TrustPass
+                        </span>
                     </a>
-                    <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                        <p class="font-weight-normal font-small mb-0">Copyright © Themesberg
-                            <span class="current-year">2020</span>. All rights reserved.
-                        </p>
-                    </div>
+
+                </div>
+
+                <div class="mt-2 mb-5d-flex text-center justify-content-center align-items-center" role="contentinfo">
+                    <p class="font-weight-normal font-small mb-0">Copyright © TrustPass Devs
+                        <span class="current-year">2021</span>. All rights reserved.
+                    </p>
                 </div>
             </div>
+
+        </div>
         </div>
     </footer>
     <!-- href management -->
     <script>
-        
+
         // milestones
         var proposal_download = "1";
         var pp1_download = "2";
@@ -843,12 +874,12 @@
         var final_download = "5";
         // documents
         var charter_document = "http://pavans.gq";
-        var group_proposal="http://pavans1.gq";
-        var individual_proposal="http://pavans2.gq";
-        var status_document="http://pavans3.gq";
-        var final_group_report="http://pavans4.gq";
-        var final_individual_report="http://pavans5.gq";
-        var log_books="http://pavans6.gq";
+        var group_proposal = "http://pavans1.gq";
+        var individual_proposal = "http://pavans2.gq";
+        var status_document = "http://pavans3.gq";
+        var final_group_report = "http://pavans4.gq";
+        var final_individual_report = "http://pavans5.gq";
+        var log_books = "http://pavans6.gq";
 
         // milestones
         var proposalDownload = document.getElementById('proposal-download');
@@ -918,6 +949,14 @@
 
     <!-- Neumorphism JS -->
     <script src="./assets/js/neumorphism.js"></script>
+
+    <!-- Custom JS -->
+    <script type="text/javascript">
+        // preloader
+        $(window).on('load', function () {
+            $(".loader").delay(1000).fadeOut("slow");
+        })
+    </script>
 </body>
 
 </html>
